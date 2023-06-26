@@ -1,0 +1,61 @@
+<router-outlet>
+    <div style="text-align: center;">
+        <button class="btn btn-outline-primary" (click)="Details()">All details</button>
+        <button class="btn btn-outline-primary" (click)="Requests()">Requests</button>
+    </div>
+    <table *ngIf="DetailsState" class="table table-success table-striped">
+        <thead>
+            <tr >
+                <th>ID</th>
+                <th>Username</th>
+                <th>Books</th>
+                <th>Startdate</th>
+                <th>Duedate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of data,index as i ">
+                <td>{{i+1}}</td>
+                <td (click)="Usernamecall(d.Username)">{{d.Username}}</td>
+                <td>{{d.books}}</td>
+                <td>{{d.Startdate}}</td>
+                <td>{{d.duedate}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table #tab *ngIf="returnState" class="table table-success table-striped">
+        <thead>
+            <tr>
+                <!-- <th>Reg Id</th> -->
+                <th>Name</th>
+                <!-- <th>Mailid</th> -->
+                <th>Returning book(s)</th>
+                <th>Duedate</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ins of localRequestdata">
+                <td (click)="Usernamecall(ins.name)"> {{ins.name}}</td>
+                <td>{{ins.Books}}</td>
+                <td>{{ins.duedate}}</td>
+                <!-- <td>{{ins.Books}}</td>
+            <td>{{ins.duedate}}</td> -->
+                <td (click)="aproveBook(ins.name)">Approve</td>
+            </tr>
+        </tbody>
+    </table>
+     
+    <div *ngIf="StudentInfoCompoSignal">
+        <ng-container *ngComponentOutlet="LoadCom"> </ng-container>
+    </div>
+    <router-outlet></router-outlet>
+    <br><br>
+    <div style="text-align: center;"><button class="btn btn-outline-secondary" (click)="back() ">Go Back</button></div>
+    <div style=" position: relative;
+ margin-left: 80%;
+ margin-right:5%;
+ bottom:-25pc; ;">
+        <p style="color: wheat;">You were logged in as {{loggedas}}</p>
+    </div>

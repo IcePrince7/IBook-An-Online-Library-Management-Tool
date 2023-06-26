@@ -1,0 +1,69 @@
+<router-outlet></router-outlet>
+<div style="text-align: center;">
+    <button class="btn btn-outline-primary" (click)="HoldingBooks()">Holding Books</button>
+    <button class="btn btn-outline-primary" (click)="Abooks()">Upcoming books</button>
+    <button class="btn btn-outline-primary" (click)="Rtn()">Return Request</button>
+    <select class="btn btn-outline-primary" *ngIf="rtnState" name="" id="">
+        <option value="Going to return">{{res.Books}}</option>
+    </select>
+</div>
+ 
+<table *ngIf=Hbook class="table table-sm " style="width: 500px; margin: 0 auto;color: wheat;">
+    <thead class="table-light">
+        <tr>
+            <th>Reg_Id</th>
+            <th>BookName</th>
+            <th>Issued Date</th>
+            <th>Submission Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{res.Reg_Id}}</td>
+            <td>{{res.Books}}</td>
+            <td>{{res.Startdate}}</td>
+            <td>{{res.duedate}}</td>
+        </tr>
+    </tbody>
+</table>
+<table *ngIf=Abook class="table table-sm " style="width: 500px; margin: 0 auto;color: wheat;">
+    <thead class="table-light">
+        <tr>
+            <th>S/No</th>
+            <th>BookName</th>
+            <th>Lend</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let it of BookData,index as i">
+            <td>{{i}}</td>
+            <td>{{it.name}}</td>
+            <td (click)="callDes(it.name)">Available</td>
+            <!-- <td>{{res.duedate}}</td>   -->
+        </tr>
+    </tbody>
+</table>
+<p *ngIf=Abook style="color: red;width: 500px; margin: 0 auto;color:">*Note : If you wanna any of this book, then you
+    should return your holding book.</p>
+<br>
+<table *ngIf=descS class="table table-sm " style="width: 500px; margin: 0 auto;color: wheat;">
+    <thead class="table-light">
+        <tr>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>{{desc}}</td><br>
+        
+    </tbody>
+</table>
+<div *ngIf=descS style="text-align: center;"><button class="btn btn-outline-secondary" (click)="BuyBook()">Confirm</button></div>
+<div style="text-align: center;">
+    <button class="btn btn-outline-danger" (click)="ProcessRtn()" *ngIf="rtnState">Submit</button><br>
+    <div style="text-align: center;"><button class="btn btn-outline-secondary" (click)="back() ">Go Back</button></div>
+    <div style=" position: relative;
+    margin-left: 80%;
+    margin-right:5%;
+    bottom:-25pc; ;">
+        <p style="color: wheat;">You were logged in as {{loggedas}}</p>
+    </div>

@@ -1,0 +1,53 @@
+.Navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo {
+
+    width: 80px;
+    cursor: pointer;
+}
+
+.Navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: mediumpurple;
+    text-transform: uppercase;
+}
+
+.Navbar ul li ::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.Navbar ul li :hover::after {
+
+    width: 100%;
+
+}
+.content{
+    color: aqua;
+    width: 100%;
+    position: absolute   ;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    /* align-items: center; */
+    text-align: center;
+}

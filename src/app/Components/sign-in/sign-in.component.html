@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+<body>
+  
+    <form #signinform="ngForm" (ngSubmit)="Checkcretial([userName.value],[password.value])" >
+        <div class="headingsContainer">
+            <h3 style="text-align: justify;">Sign In</h3>
+        </div>
+        <div class="mainContainer">
+            <!-- For Username -->
+            <label for="username">Your username : </label>
+            <input #userName type="text" placeholder="Enter Username" name="username" required>
+            <br><br>
+            <!--For Password -->
+            <label for="pswrd">Your password : </label>
+            <input #password type="password" placeholder="Enter Password" name="pswrd" required><br><br>
+            <div class="subcontainer">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+            <!-- Sign up link -->
+            <p class="register">Not a member? <a routerLink="/Signup">Register here!</a></p>
+        </div>
+
+    </form>
+</body>
+
+ <router-outlet> </router-outlet>

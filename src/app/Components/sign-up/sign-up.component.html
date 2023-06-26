@@ -1,0 +1,45 @@
+<router-outlet></router-outlet>
+<body>
+    <form #signinform="ngForm" (ngSubmit)="AddCredential([userName.value],[pwd.value],[Email.value],[Cpassword.value],[RID.value] )" >
+        <div class="headingsContainer">
+            <h3 style="text-align: justify;">Sign Up</h3>
+        </div>
+        <div class="mainContainer">
+            <!-- For Username -->
+            <label for="username">Enter your name: </label>
+            <input #userName type="text" placeholder="Firstname Lastname" name="username" required>
+            <br><br>
+
+            <label for="Reg_Id">Enter your ID : </label><br>
+            <input #RID type="number" placeholder="Registration ID" name="username" required>
+            <br><br>
+    
+             <!-- For Email -->
+            <label for="username">Enter your e-mail : </label>
+            <input #Email type="text" placeholder="Ex : Abc@gmail.com" name="username" required> 
+            <br><br>
+            
+            <!--For Password -->
+            <label for="pswrd">Create a password : </label>
+            <input #pwd class = "passs" type= "password" [(ngModel)] = 'pwd.value'  placeholder="Enter password" name="pswrd" required>
+            <br><br>
+            
+             <!-- Confirm Password -->
+            <label for="Rpws">Confirm password : </label>
+            <input #Cpassword class = "passs" type="pasword " [(ngModel)] = 'Cpassword.value' placeholder="Re-Enter password" name="pswrd" required style="width: 95%;
+            margin: 10px 0;
+            border-radius: 15px;
+            padding: 10px 15px;
+            box-sizing: border-box;"><br><br>
+            
+            <!-- Submit button -->
+            <button type="submit">Create Account</button>
+           
+            <!-- Sign up link -->
+            <p class="register">Already a member? <a routerLink="/Signin">Sign In </a></p>
+        </div>
+        
+    </form>
+</body>
+<router-outlet></router-outlet>
+ 
