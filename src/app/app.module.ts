@@ -15,8 +15,6 @@ import { StudentInfoComponent } from './Components/student-info/student-info.com
 import { StudPageComponent } from './Components/stud-page/stud-page.component';
 // import { NewBookService } from './Service/new-book.service';
 import { LibSerService } from './Service/lib-ser.service';
-import { studAllow } from './Service/guards';
-
 
 
 @NgModule({
@@ -42,7 +40,7 @@ import { studAllow } from './Service/guards';
  
  
   ],
-  providers: [LibSerService,StudentInfoComponent,studAllow],
+  providers: [LibSerService,StudentInfoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
