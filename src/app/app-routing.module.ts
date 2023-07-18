@@ -6,7 +6,7 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { StudPageComponent } from './Components/stud-page/stud-page.component';
 import { StudentInfoComponent } from './Components/student-info/student-info.component';
-import { studAllow } from './Service/guards';
+
 
 const routes: Routes = [
   { path: "",title: 'iBook', component: ContentComponent },
@@ -20,7 +20,7 @@ const routes: Routes = [
         path: "Studinfo",title: 'StudInfo', component: StudentInfoComponent
       }]
   },
-  { path: "StudComp",title: 'Student iBookpage', component: StudPageComponent , canActivate: [studAllow]}
+  { path: "StudComp",title: 'Student iBookpage', component: StudPageComponent }
 
 ];
 
