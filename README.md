@@ -6,14 +6,12 @@ This project, **AngBoot**, serves as a comprehensive library management system b
 
 **AngBoot** facilitates seamless book transactions within a library environment, providing essential features such as:
 
-- **Home page**: Students/Admin can either sign in or signup
-![alt text](image.png)
+- **Home page**: Students/Admin can either sign in or signup![image](https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/assets/94789529/a56ba88f-1801-4475-8941-d1860da0e598)
 - **Student Access**: Students can browse available books, place requests, and view upcoming releases.
-- **Book Exchange System**: To borrow a book, students must exchange a book they currently possess, fostering a fair exchange system within the library.
-![alt text](image-1.png)
+![image](https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/assets/94789529/b1dc72c1-a17d-4593-8db0-aec2123dccdc)
+- **Book Exchange System**: To borrow a book, students must exchange a book they currently possess, fostering a fair exchange system within the library.![image](https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/assets/94789529/8e282c2f-bd81-4ba4-a0f2-bf743f21d04f)
 - **Upcoming Releases**: A dedicated page displays upcoming book releases, allowing students to anticipate and request new titles in advance.
-- **Admin Approval**: Administrators can review and approve book requests, ensuring proper management of inventory and student transactions.
-![alt text](image-2.png)
+- **Admin Approval**: Administrators can review and approve book requests, ensuring proper management of inventory and student transactions.![image](https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool/assets/94789529/b9b6da51-b8e7-4d3d-9710-8e50a5478dbb)
 
 ## Angular Services
 
