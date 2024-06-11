@@ -1,31 +1,69 @@
-# AngBoot
+ # [AngBoot](https://github.com/IcePrince7/IBook-An-Online-Library-Management-Tool)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+This project, **AngBoot**, serves as a comprehensive library management system built using Angular. It enables students to browse and purchase books from the library while providing administrators with tools to manage book requests and inventory.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**AngBoot** facilitates seamless book transactions within a library environment, providing essential features such as:
+
+- **Home page**: Students/Admin can either sign in or signup
+![alt text](image.png)
+- **Student Access**: Students can browse available books, place requests, and view upcoming releases.
+- **Book Exchange System**: To borrow a book, students must exchange a book they currently possess, fostering a fair exchange system within the library.
+![alt text](image-1.png)
+- **Upcoming Releases**: A dedicated page displays upcoming book releases, allowing students to anticipate and request new titles in advance.
+- **Admin Approval**: Administrators can review and approve book requests, ensuring proper management of inventory and student transactions.
+![alt text](image-2.png)
+
+## Angular Services
+
+**AngBoot** employs Angular services to encapsulate reusable logic and functionality throughout the application. Key services include:
+
+- **Authentication Service**: Manages user authentication and authorization, enabling secure access to student and admin features.
+- **Book Service**: Handles book-related operations such as fetching available books, processing requests, and managing inventory.
+- **User Service**: Facilitates user management tasks, including user registration, login, and profile management.
+
+## Angular Hooks
+
+Angular hooks, also known as lifecycle hooks, play a crucial role in managing component lifecycle events. **AngBoot** leverages Angular hooks for various purposes, including:
+
+- **OnInit**: Used for initializing component data upon creation.
+- **OnDestroy**: Cleans up resources and subscriptions when a component is destroyed.
+- **OnChanges**: Reacts to changes in component input properties.
+
+## Styling with Bootstrap
+
+To enhance the visual appeal and user experience, **AngBoot** integrates Bootstrap for styling components and layout. Bootstrap's responsive design and extensive component library ensure a consistent and polished look across the application.
+
+For more details on implementation and usage of Angular services, hooks, and Bootstrap styling, please refer to the project source code and documentation.
 
 ## Backend Support
 
-Download and install JSON server and serve Lib.JSON file as a source to run
+**AngBoot** utilizes JSON server to provide backend support. Follow these steps to set up the backend:
 
-## Code scaffolding
+1. Download and install JSON server.
+2. Serve `Lib.JSON` file as a data source to simulate a backend for the application nad fire the comment npx json-server --Foldernamehere--
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Development Server
 
-## Build
+To start the development server, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Run `ng serve` to launch the Angular development server.
+2. Navigate to `http://localhost:4200/` in your web browser.
+3. The application will automatically reload upon any changes to the source files.
 
-## Running unit tests
+## Angular CLI Commands
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**AngBoot** leverages Angular CLI for code scaffolding, building, and testing. Here are some useful commands:
 
-## Running end-to-end tests
+- `ng generate component component-name`: Generate a new component.
+- `ng build`: Build the project, with build artifacts stored in the `dist/` directory.
+- `ng test`: Execute unit tests via Karma.
+- `ng e2e`: Run end-to-end tests.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+For further assistance, refer to the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Further help
+## Contributing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contributions to **AngBoot** are welcome! Please follow the [Contributing Guidelines](CONTRIBUTING.md) to contribute to the project.
+ 
